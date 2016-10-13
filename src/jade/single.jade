@@ -1,0 +1,162 @@
+extends _template
+
+block main
+	.w1320
+		//breadcumbs
+		.inner__header
+			.container
+				h1 Каталог
+				ul.breadcumbs
+					li: a(href="#") Главная
+					li.active: a(href="#") Каталог
+		//breadcumbs end
+		.single.mt-35
+			.container
+				.row
+					.col-md-6
+						.single-preview#singlePreview
+							.popular__note Популярный товар
+							.single-preview__main
+								img(src="img/single-main.jpg", alt="")
+							a(href="#").single-preview__magnifier: i.icon.icon-magnifier-big
+							.single-preview__nav
+								.controls
+									button.prev: i.icon.icon-totop-arr
+									button.next: i.icon.icon-tobot-arr
+								ul
+									li: a(href="img/single-sdasd.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://nibler.ru/uploads/users/2012-03-27/%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D1%81%D1%82%D0%BE%D0%BB-%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9-%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D1%81%D0%BC%D0%B5%D1%88%D0%BD%D1%8B%D0%B5%20%D0%BA%D0%B0%D1%80%D1%82%D0%B8%D0%BD%D0%BA%D0%B8-%D1%84%D0%BE%D1%82%D0%BE%D0%BF%D1%80%D0%B8%D0%BA%D0%BE%D0%BB%D1%8B_8617971351.jpg")
+									li: a(href="img/single-main.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://www.planwallpaper.com/static/images/ZhGEqAP.jpg")
+									li: a(href="img/single-main.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://www.planwallpaper.com/static/images/6768666-1080p-wallpapers.jpg")
+									li: a(href="img/single-main.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://www.planwallpaper.com/static/images/kartandtinki1_photo-wallpapers_02.jpg")
+									li: a(href="img/single-main.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://www.planwallpaper.com/static/images/Firewatch-Wallpaper-desktop-2560x1440-green.jpg")
+									li: a(href="img/single-main.jpg"): img(src="img/single-thumb.png", alt="" data-biggest-image="http://wallpapercave.com/wp/vOJsqkP.jpg")
+
+					.col-md-6
+						ul.star-rating#starRating
+							li.icon.icon-star
+							li.icon.icon-star
+							li.icon.icon-star
+							li.icon.icon-star
+							li.icon.icon-star
+						.single__name Счетчик банкнот Laurel J-700
+						.single__chars.single-chars
+							.single-chars__top.clearfix.blocks-justify
+								.single-chars__left.col
+									.price 29 358 р
+									.instock.yes
+										i.icon.icon-checkbox-galka-green
+										span В наличии
+								.single-chars__center.col
+									span Количество
+									input(type="number")
+								.single-chars__button.col
+									a(href="#").btn.btn--blue 
+										i.icon.icon-cart-white
+										span Добавить в корзину
+							#singleCharsTabs
+								ul.tabs-nav.single-chars__tabs-nav
+									li.active: a(href="#charTabsDesc") Описание
+									li: a(href="#charTabsSpecific") Спецификации
+									li: a(href="#charTabsReviews") отзывы
+									li: a(href="#charTabsInfo") Информация
+								.tabs-content.single-chars__tabs-content
+									.tabs-content__item#charTabsDesc.active
+										.name Описание
+										p Наша специализированная компания предлагает вам качественное торговое оборудование, позволяющее оснастить магазин, банк, офис удобными приборами, облегчающими работу кассира.
+										p В нашем каталоге имеется большой выбор кассовых аппаратов, фискальных регистраторов, детекторов подлинности валюты и счетчиков купюр. Если вы оказываете платные услуги
+									.tabs-content__item#charTabsSpecific
+										.name Спецификация
+										.specific-table
+											.specific-table__row.clearfix
+												span.specific-table__cell.fl-left Детекция
+												span.specific-table__cell.fl-right просвет / ультрафиолетовая
+											.specific-table__row.clearfix
+												span.specific-table__cell.fl-left Загрузка купюр
+												span.specific-table__cell.fl-right 500
+											.specific-table__row.clearfix
+												span.specific-table__cell.fl-left Поддержка валют
+												span.specific-table__cell.fl-right нет
+											.specific-table__row.clearfix
+												span.specific-table__cell.fl-left Производитель
+												span.specific-table__cell.fl-right DORS
+											.specific-table__row.clearfix
+												span.specific-table__cell.fl-left Скорость счета
+												span.specific-table__cell.fl-right 500
+
+									.tabs-content__item#charTabsReviews
+										.name Отзывы
+										.reviews-form
+											.row.clearfix
+												.col-md-6
+													input(type="text" placeholder="Ваше имя*")
+												.col-md-6
+													input(type="text" placeholder="E-mail*")
+												.col-md-12
+													textarea
+												.col-md-12
+													input(type="submit" value="Отправить отзыв").btn.btn--blue
+										.reviews-item
+											.reviews-item__top.clearfix
+												.review-item__name.fl-left Александр
+												.reviews-item__time.fl-right 20 декабря 2015
+											.reviews-item__message
+												p Брал лыжи и филипс, в lg сбоку вообще теряюся цвета и при подкючении к компу очень медленно двигается перепробывал все и мышь менял, филисп очень и оченьтупой, в этоге взял самсунк все работает превосходно, думал 6000 взять или 6400в итоге взял 64й он 200 герц а тот 100, движения плавные, хорошо показывает даже старые фильмы, много улучшалок картинки. 
+									.tabs-content__item#charTabsInfo
+										.name Отзывы
+										p Наша специализированная компания предлагает вам качественное торговое оборудование, позволяющее оснастить магазин, банк, офис удобными приборами, облегчающими работу кассира.
+										p В нашем каталоге имеется большой выбор кассовых аппаратов, фискальных регистраторов, детекторов подлинности валюты и счетчиков купюр. Если вы оказываете платные услуги
+
+		// popular
+		.page__popular
+			.popular__note Популярные товары
+			.container
+				#popularCarousel
+					-for(var i = 1; i <= 12; i++)
+						.tovar
+							.tovar__image
+								img(src="img/catalog-preview.jpg", alt="")
+							.tovar__info
+								strong.tovar__name Счетчик банкнот DORS 750
+								p.tovar__desc Счетчик банкнот DORS 750 с автоматическим распознаванием...
+								.tovar__bottom.clearfix
+									.col
+										p.tovar__price 50 223 Р
+										ul.star-rating#starRating
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+									.col.fl-right
+										a(href="#").btn.btn--blue.catalog-buy
+											i.icon.icon-cart-white
+											span Купить
+		// popular end
+		// partners
+		.page__partners.partners
+			.partners__header
+				.container
+					h2 Наши партнеры
+					.partners__controls
+						a(href="#").prev &lt;
+						a(href="#").next &gt;
+			.partners__list#partnersCarousel
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+		// partners end

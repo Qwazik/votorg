@@ -1,0 +1,57 @@
+// Main header
+header.page__header.main-header
+	.main-header__top.top-line
+		.w1320
+			.container
+				.col.xs-33
+					.header-catalog
+						a.header-catalog__button(href="#") 
+							i.icon.icon-resp
+							span Каталог
+						include header-catalog__menu
+				.col.sm-right.xs-33
+					button.top-line__responsive-menu
+						span Меню
+						i.icon.icon-arr-bot-white
+					ul.top-line__menu
+						li: a(href="#") О нас
+						li: a(href="#") Блог компании
+						li: a(href="#") Доставка и оплата
+						li: a(href="#") Контакты
+				.xs-33.hidden-md.hidden-lg.hidden-sm
+					button.responsive-search: i.icon.icon-magnifier
+				.search
+					form(action="#")
+						input(type="text" placeholder="Поиск")
+						input(type="submit" value="Поиск")
+	.main-header__bottom.w1320
+		.container
+			.col.sm-12
+				a(href="/").logo
+					img(src="img/logo.jpg", alt="")
+			.col.ta-center
+				a(href="tel:+74951344245").phone-big 7-495-134-42-45
+				a(href="#").btn.btn--default Напишите нам
+			.col
+				.header-cart
+					.header-cart__top
+						.icon-wrap
+							i.icon.icon-cart-blue
+						.header-cart__info В корзине <a href="#">1 товар</a>  на <span>1 611 руб</span>
+					a(href="#").btn.btn--blue Оформить покупку
+			.col
+				.user-block
+					.icon-wrap
+						i.icon.icon-person
+					a(href="#") Вход
+					a(href="#") Регистрация
+				.city
+					a(href="#").city__current.btn.btn--default#cityButton
+						span Новосибирск
+						i.icon.icon-arr-bot
+					ul.city__list
+						li: a(href="#") Москва
+						li: a(href="#") Брянск
+						li: a(href="#") Питер
+						li: a(href="#") Кострома
+// Main header end

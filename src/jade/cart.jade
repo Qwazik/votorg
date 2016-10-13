@@ -1,0 +1,86 @@
+extends _template
+
+block main
+	.w1320
+		//breadcumbs
+		.inner__header
+			.container
+				h1 Каталог
+				ul.breadcumbs
+					li: a(href="#") Главная
+					li: a(href="#") Каталог
+					li.active: a(href="#") Весовое оборудование
+		//breadcumbs end
+		//cart - table
+		.main-cart.container
+			.cart-table#cartTable
+				table
+					thead
+						tr
+							td Наименование 
+							td Цена за ЕД.
+							td Колличество
+							td Стоимость
+							td
+					tbody.clearfix
+						tr
+							td
+								img(src="img/small-tovar.jpg", alt="").image
+								span.name Счетчик банкнот Laurel j-700
+							td: span.price 18500 руб
+							td: input(type="number" value="1").num
+							td: output.sum 37000 руб
+							td: a(href="#").close: i.icon.icon-close
+						tr
+							td
+								img(src="img/small-tovar.jpg", alt="").image
+								span.name Счетчик банкнот Laurel j-700
+							td: span.price 18500 руб
+							td: input(type="number" value="1").num
+							td: output.sum 37000 руб
+							td: a(href="#").close: i.icon.icon-close
+					tfoot
+							td(colspan="3").ta-right: span.sum Сумма заказа: 29 358 руб
+							td(colspan="2").ta-center: a(href="#").btn.btn--blue Оформить заказ
+		//cart - table end
+		//checkout
+		.checkout-form__wrap
+			.container.checkout-form
+				h2 Оформление заказа
+				.row
+					.checkout-form__top.col-md-12
+						label.checkbox__wrap
+							input(type="checkbox")
+							span Физическое лицо
+						label.checkbox__wrap
+							input(type="checkbox")
+							span Юридическое лицо
+					.checkout-form__center
+						.col-md-6
+							.checkout-form__item
+								.checkout-form__title Ф.И.О. *
+								input(type="text")
+							.checkout-form__item
+								.checkout-form__title E-Mail *
+								input(type="text")
+							.checkout-form__item
+								.checkout-form__title Адрес доставки *
+								textarea
+
+						.col-md-6
+							.checkout-form__item
+								.checkout-form__title Телефон *
+								input(type="text")
+							.checkout-form__item 
+								.checkout-form__title Способ оплаты
+								select
+									option Наличные курьеру
+									option Наличные курьеру
+									option Наличные курьеру
+							.checkout-form__item
+								.checkout-form__title Комментарий к заказу
+								textarea
+					.checkout-form__footer.col-md-12
+						input(type="submit" value="оформить заказ").btn.btn--blue
+		//checkout end
+		

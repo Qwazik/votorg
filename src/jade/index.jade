@@ -1,0 +1,168 @@
+extends _template
+
+block main
+	.w1320
+		// main-slider
+		.page__slider
+			.main-slider
+				.main-slider__progress#sliderProgress
+					.indicator
+				.main-slider__list#mainSlider
+					-for(var i = 1; i<=5; i++)
+						.main-slider__item
+							.row
+								.right
+									.discount.animated.zoomIn
+										span Всего за
+										span.price 60 239
+										span руб								
+									img.animated.fadeInRight(src="img/slider-comp.png", alt="")
+								.left
+									strong.animated.fadeInLeft TOUCHPOS 355
+									p.animated.fadeInLeft POS-терминал сенсорный
+									ul.animated.fadeInLeft
+										li.animated.fadeInLeft Мощный процессор Intel Celeron с частотой 1,5 ГГц
+										li.animated.fadeInLeft От 1 до 2 Гб оперативной памяти
+										li.animated.fadeInLeft 15-дюймовый дисплей
+									a(href="#").btn.btn--blue.animated.fadeInLeft Купить сейчас
+								
+		// main-slider end
+		// category
+		.page__category
+			.category.clearfix
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat1.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat2.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Платформенные весы
+								li: a(href="#") Крановые весы
+								li: a(href="#") Встраиваемые весы
+								li: a(href="#") Весы с печатью этикеток
+								li: a(href="#") Торговые весы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat3.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Сканеры штрих кода
+								li: a(href="#") Терминалы сбора данных
+								li: a(href="#") Аксессуары
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat4.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat5.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat6.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")	и др.
+				a(href="#").category__more
+					.icon-wrap +
+					span Раскрыть больше категорий
+		// category end
+		// popular
+		.page__popular
+			.popular__note Популярные товары
+			.container
+				#popularCarousel
+					-for(var i = 1; i <= 12; i++)
+						include includes/tovar
+		// popular end
+		// news
+		.page__news
+			.container
+				.news
+					h2 Последние новости
+				.news__list#newsCarousel
+					-for(var i = 1; i<=12; i++)
+						.news__item
+							p.news__date 07.09.2016
+							strong.news__name Аппарат имеет в своём составе фискальный накопитель
+							p.news__desc В соответствии в обновленным законодательством в области применения контрольно-кассовой техники (54-ФЗ) каждый кассовый аппарат, применяемый на территории Российской Федерации, должен передавать
+		// news end
+		// about
+		.page__about
+			.container
+				h2 О компании
+				p Планируя открытие торгового объекта, владельцы бизнеса сталкиваются с необходимостью решения многих важных вопросов. Компания "Всеоторг" (Москва), предлагающая  все для торговли, поможет вам успешно и  грамотно реализовать свои идеи. Ассортимент товаров, представленных в нашем каталоге, насчитывает десятки разновидностей торгово-кассового оборудования. Вы можете приобрести климатические системы, кассовую технику, расходные материалы от известных производителей и многое другое,  без чего нельзя представить современный торговый объект.
+				h3 Преимущества сотрудничества с компанией "Всеоторг"
+				p Направлением деятельности нашей организации является не только продажа торгово-кассового оборудования, но и профессиональный монтаж и техническое обслуживание данных устройств. Наши специалисты проконсультируют вас по подбору наиболее оптимального варианта, учитывая специфику магазина, личные  пожелания и финансовые возможности . Эта услуга актуальна не только для начинающих  свой бизнес, связанный с розничной торговлей. Она будет полезна и тем,  кто  заинтересован  в модернизации своего торгового объекта. В условиях высокой конкуренции используются  любые способы привлечения  покупателя.  Поэтому  создание комфортного и уютного интерьера имеет не меньшее значение, чем грамотная ценовая политика и обширный выбор продукции. 
+				p Впечатление, которое формируется у покупателя при посещении вашей торговой точки, зависит не только от ассортимента товаров и качества работы персонала, но и от оснащения магазина. Предлагаемое нами торгово-кассовое оборудование отличается не только высокой функциональностью, но и привлекательным дизайном. Оно позволяет придать интерьеру торгового объекта современный внешний вид и обеспечить комфорт как для сотрудников магазина, так и для покупателей.
+		// about end
+		// partners
+		.page__partners.partners
+			.partners__header
+				.container
+					h2 Наши партнеры
+					.partners__controls
+						a(href="#").prev &lt;
+						a(href="#").next &gt;
+			.partners__list#partnersCarousel
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+		// partners end

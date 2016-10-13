@@ -1,0 +1,156 @@
+extends _template
+
+block main
+	.w1320
+		//breadcumbs
+		.inner__header
+			.container
+				h1 Каталог
+				ul.breadcumbs
+					li: a(href="#") Главная
+					li: a(href="#") Каталог
+					li.active: a(href="#") Весовое оборудование
+		//breadcumbs end
+		//catalog category
+		.category-catalog.mt-35
+			.container
+				.row
+					.col-md-4.col-lg-3
+						.sidebar-filter
+							form(action="#")
+								.sidebar-filter__header Подбор параметров
+								.sidebar-filter__row
+									.sidebar-filter__name Розничная цена
+									.sidebar-filter__body
+										.price-slider__wrap
+											.clearfix
+												.min.fl-left 0 
+												.max.fl-right 1000
+											.price-slider#priceSlider
+								.sidebar-filter__row
+									.sidebar-filter__name Производитель
+									.sidebar-filter__body
+										select(name="brend")
+											option Seller
+											option Seller
+											option Seller
+											option Seller
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Предел взвешивания
+									.sidebar-filter__body.ves
+										label.checkbox__wrap
+											input(type="checkbox")
+											span 32
+										label.checkbox__wrap
+											input(type="checkbox")
+											span 6
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Установка
+									.sidebar-filter__body
+										label.checkbox__wrap
+											input(type="checkbox")
+											span Мобильный
+										label.checkbox__wrap
+											input(type="checkbox")
+											span Стационарный
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Дисплей
+									.sidebar-filter__body
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Порты
+									.sidebar-filter__body
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Тип индикации
+									.sidebar-filter__body
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Аккумулятор
+									.sidebar-filter__body
+								.sidebar-filter__row
+									.sidebar-filter__name.toggle Стойка
+									.sidebar-filter__body
+										label.checkbox__wrap
+											input(type="checkbox")
+											span Есть
+										label.checkbox__wrap
+											input(type="checkbox")
+											span Нет
+								.sidebar-filter__footer
+									input(type="submit" value="Применить").btn.btn--blue
+									input(type="reset" value="Сбросить фильтр")
+					.col-md-8.col-lg-9.category-catalog__right
+						.row
+							.col-md-12
+								.top-filter
+									.top-filter__item.sort-type
+										span Сортировать по:
+										ul
+											li.active: a(href="#") Названию
+											li: a(href="#") Цене
+											li: a(href="#") Популярности
+									.top-filter__item.fl-right
+										span Выводить по:
+										ul
+											li: a(href="#") 6
+											li.active: a(href="#") 9
+											li: a(href="#") 12
+
+							-for(var i = 1; i <= 9; i++)
+								.col-lg-4.col-sm-6
+									include includes/tovar 
+							.col-md-12.ta-center.category-catalog__footer
+								ul.pagination
+									li.active: a(href="#") 1
+									li: a(href="#") 2
+									li: a(href="#") 3
+									li: a(href="#") 4
+									li: a(href="#") 5
+									li ...
+									li: a(href="#") &gt;
+
+		//catalog category end
+		// popular
+		.page__popular
+			.popular__note Популярные товары
+			.container
+				#popularCarousel
+					-for(var i = 1; i <= 12; i++)
+						include includes/tovar
+		// popular end
+		// about
+		.page__about.w1320.bg-white
+			.container
+				h2 весы торговые
+				p Наша компания предлагает Вам купить весы торговые отличного качества и по низким ценам.
+				p По запросу «куплю весы торговые» Вы найдете множество вариантов торгово-кассового оборудования для Вашего бизнеса. Компания «Всеоторг» располагает огромным ассортиментом различного торгового оборудования, среди которых принтеры чеков, тахографы, денежные ящики, торговые электронные веса и многое другое. Наши торговые весы отличаются отличными техническими характеристиками, точностью взвешивания и ударопрочным корпусом.
+				p Электронные весы торговые применяются для ведения учетных, товарных и складских операций. Имеющийся интерфейс позволяет использовать торговые электронные веса  не только как отдельный стационарный элемент, но и как часть автоматизированной торговой системы.
+				p Электронные весы торговые взвешивают, фасуют и выполняют расчет стоимости по цене за килограмм, исходя из измеренной массы. Торговые весы могут быть выполнены с разным расположением дисплеев – на стойке или на корпусе и использоваться как для стационарной работы, так и в составе автоматизированной системы. Веса торговые взвешивают товар с точностью до 1 грамма. Купить весы торговые вы можете на сайте компании «Всеоторг», не выходя из дома или офиса. Веса торговые выполняют множество операций, упрощающих процесс торговли как оптовой, так и розничной. Набирая в поисковых системах «куплю весы торговые», вы обязательно найдете необходимую Вам модель весов на сайте нашей компании. Очень просто найти и купить весы торговые электронные, если вы обратитесь к специалистам, которые помогут подобрать для Вас наилучший вариант. Такому оборудованию под силу любой торговый вес, вес продуктов питания или любых непищевых продуктов.
+				p Решив для себя: «куплю весы электронные торговые», - вы наверняка найдете то, что нужно именно для вашей отрасли торговли на сайте компании «Всеоторг». Купить весы торговые электронные Вы сможете по очень низкой цене, при этом все наше оборудование отличного качества и от зарекомендовавших себя производителей. Теперь Вы можете быть уверены, что максимально точно будет взвешен любой торговый вес - вес любого продукта. По запросу «куплю весы электронные торговые» вы всегда найдете необходимое Вам весовое оборудование по низким ценам на сайте компании «Всеоторг». 
+		// about end
+		// partners
+		.page__partners.partners
+			.partners__header
+				.container
+					h2 Наши партнеры
+					.partners__controls
+						a(href="#").prev &lt;
+						a(href="#").next &gt;
+			.partners__list#partnersCarousel
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+		// partners end

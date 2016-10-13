@@ -1,0 +1,148 @@
+extends _template
+
+block main
+	.w1320
+		//breadcumbs
+		.inner__header
+			.container
+				h1 Каталог
+				ul.breadcumbs
+					li: a(href="#") Главная
+					li.active: a(href="#") Каталог
+		//breadcumbs end
+		// category
+		.page__category
+			.category.clearfix
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat1.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat2.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Платформенные весы
+								li: a(href="#") Крановые весы
+								li: a(href="#") Встраиваемые весы
+								li: a(href="#") Весы с печатью этикеток
+								li: a(href="#") Торговые весы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat3.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Сканеры штрих кода
+								li: a(href="#") Терминалы сбора данных
+								li: a(href="#") Аксессуары
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat4.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat5.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#")  и др.
+				.col-md-6.col-sm-12
+					.category__item
+						.category__image
+							img(src="img/main-cat6.png", alt="")
+						.category__right
+							.category__name Кассовая техника
+							ul.category__list
+								li: a(href="#") Информационно-платежные системы
+								li: a(href="#") Кассовые боксы
+								li: a(href="#") Кассовые аппараты
+								li: a(href="#") Фискальные регистраторы
+								li: a(href="#") POS-системы
+								li: a(href="#") и др.
+				a(href="#").category__more
+					.icon-wrap +
+					span Раскрыть больше категорий
+		// category end
+		// popular
+		.page__popular
+			.popular__note Популярные товары
+			.container
+				#popularCarousel
+					-for(var i = 1; i <= 12; i++)
+						.tovar
+							.tovar__image
+								img(src="img/catalog-preview.jpg", alt="")
+							.tovar__info
+								strong.tovar__name Счетчик банкнот DORS 750
+								p.tovar__desc Счетчик банкнот DORS 750 с автоматическим распознаванием...
+								.tovar__bottom.clearfix
+									.col
+										p.tovar__price 50 223 Р
+										ul.star-rating#starRating
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+											li.icon.icon-star
+									.col.fl-right
+										a(href="#").btn.btn--blue.catalog-buy
+											i.icon.icon-cart-white
+											span Купить
+		// popular end
+		// partners
+		.page__partners.partners
+			.partners__header
+				.container
+					h2 Наши партнеры
+					.partners__controls
+						a(href="#").prev &lt;
+						a(href="#").next &gt;
+			.partners__list#partnersCarousel
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner1.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner2.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner3.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner4.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner5.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+				img(src="img/partner6.jpg", alt="")
+		// partners end
